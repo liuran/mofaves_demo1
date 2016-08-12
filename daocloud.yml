@@ -1,0 +1,18 @@
+image: daocloud/ci-node:0.10
+
+services:
+    - mongodb
+
+env:
+    - MONGODB_INSTANCE_NAME = "psmEvdFanhb5JUHO"
+    - MONGODB_USERNAME = "u8szAo6FHC93jkDb"
+    - MONGODB_PASSWORD = "peTlzZOXKpRHdVQg0"
+    - MONGODB_PORT_27017_TCP_ADDR = "10.10.190.60"
+    - MONGODB_PORT_27017_TCP_PORT = "27017"
+
+install:
+    - npm install -g mocha
+
+script:
+    - npm install
+    - mocha
